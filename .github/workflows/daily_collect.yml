@@ -59,6 +59,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${{ github.repository }}.git
           git add .refresh_token
           git diff --staged --quiet || git commit -m "chore: UTM refresh_token 자동 갱신 [skip ci]"
           git push
