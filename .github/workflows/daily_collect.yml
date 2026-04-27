@@ -10,6 +10,8 @@ jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    permissions:
+      contents: write
 
     env:
       # Homepage Supabase (UTM)
